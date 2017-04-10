@@ -87,3 +87,10 @@ ENV/
 
 # Rope project settings
 .ropeproject
+
+#Backup files
+*.py~
+*~
+
+#Default virtualenv
+dadbotenv/
