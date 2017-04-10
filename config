@@ -1,0 +1,4 @@
+[setup]
+botname = dadbot
+token_var=DADBOT_TOKEN
+id_var=DADBOT_ID
