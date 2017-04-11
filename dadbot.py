@@ -26,6 +26,7 @@ Bot Commands
 JOKE_COMMAND = "joke"
 TELL_COMMAND = "listen"
 WISDOM_COMMAND = "advice"
+SAVE_COMMAND = "write down your jokes"
 
 joke_list=List = open("jokes.txt").readlines()
 joke_cmd = Joke(joke_list)
@@ -46,6 +47,8 @@ def handle_command(command, channel):
         response = joke_cmd.add_joke(new_joke)
     elif command.startswith(WISDOM_COMMAND):
         response = advice_cmd.get_random_advice()
+    elif command.startswith(SAVE_COMMAND):
+        response = joke_cmd.save_jokes("jokes.txt")
     slack_client.api_call("chat.postMessage", channel=channel,
                           text=response, as_user=True)
 

@@ -94,3 +94,7 @@ ENV/
 
 #Default virtualenv
 dadbotenv/
+
+#local setup files
+config
+jokes.txt
